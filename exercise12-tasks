@@ -1,0 +1,10 @@
+Exercise 12 — Tasks
+
+Find the number of movies each director has directed
+
+SELECT director, COUNT(director) FROM movies GROUP BY director;
+
+Find the total domestic and international sales that can be attributed to each director
+
+SELECT DISTINCT director, SUM(international_sales + domestic_sales) AS total_sales FROM movies JOIN boxoffice WHERE movie_id = id GROUP BY director;
+
